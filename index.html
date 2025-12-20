@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pokémon List</title>
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    crossorigin="anonymous"
-  />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔴</text></svg>">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
-<<<<<<< HEAD
 
   <nav class="navbar navbar-expand-sm navbar-dark bg-primary" role="navigation" aria-label="Main navigation">
     <a class="navbar-brand" href="#">Pokédex</a>
@@ -41,15 +41,8 @@
     <ul class="pokemon-list list-group"></ul>
   </div>
 
-  <div
-    class="modal fade"
-    id="pokemonModal"
-    tabindex="-1"
-    role="dialog"
-    aria-labelledby="pokemonModalLabel"
-    aria-hidden="true"
-    aria-modal="true"
-  >
+  <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModalLabel"
+    aria-hidden="true" aria-modal="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -60,14 +53,11 @@
         </div>
 
         <div class="modal-body text-center">
-          <img
-            id="pokemonImage"
-            src="placeholder.png"
-            class="img-fluid mb-3"
-            alt="Image of selected Pokémon"
-          />
+          <img id="pokemonImage"
+            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzZjNzU3ZCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkxvYWRpbmcuLi48L3RleHQ+PC9zdmc+"
+            class="img-fluid mb-3" alt="Image of selected Pokémon" />
           <p id="pokemonHeight"></p>
-          <p id="pokemonTypes"></p> 
+          <p id="pokemonTypes"></p>
         </div>
       </div>
     </div>
@@ -76,22 +66,8 @@
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
-  <script src="dist/scripts.js"></script> 
-=======
-  <h1>Pokémon List</h1>
-  <ul class="pokemon-list"></ul>
-
- 
-  <div id="pokemonModal" class="modal">
-    <div class="modal-content">
-      <span id="closeModal" class="close-btn">&times;</span>
-      <h2 id="pokemonName"></h2>
-      <p id="pokemonHeight"></p>
-      <img id="pokemonImage" src="" alt="Pokémon Image" />
-    </div>
-  </div>
-
   <script src="js/scripts.js"></script>
->>>>>>> 98c147be915470fcc4e4092125c3d07834a57a01
+
 </body>
+
 </html>
