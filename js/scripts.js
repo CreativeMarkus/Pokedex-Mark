@@ -1,4 +1,4 @@
-// Pokédex App - Working Version
+// Pokédex App - Clean Working Version
 let pokemonRepository = (function () {
   let pokemonList = [];
   let pokemonListElement = document.querySelector('.pokemon-list');
@@ -40,7 +40,6 @@ let pokemonRepository = (function () {
 
   function showDetails(pokemon) {
     loadDetails(pokemon).then(() => {
-      // Set the content
       document.getElementById('pokemonModalLabel').innerText = pokemon.name;
       document.getElementById('pokemonHeight').innerText = `Height: ${pokemon.height} m`;
       document.getElementById('pokemonImage').src = pokemon.imageUrl;
@@ -48,7 +47,6 @@ let pokemonRepository = (function () {
       let types = pokemon.types.join(', ');
       document.getElementById('pokemonTypes').innerText = `Types: ${types}`;
 
-      // Show the modal
       $('#pokemonModal').modal('show');
     });
   }
@@ -91,7 +89,6 @@ let pokemonRepository = (function () {
 document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM loaded, starting Pokédex...');
 
-  // Re-initialize the list element since DOM is now ready
   pokemonRepository.setPokemonListElement(document.querySelector('.pokemon-list'));
 
   if (!document.querySelector('.pokemon-list')) {
@@ -99,33 +96,28 @@ document.addEventListener('DOMContentLoaded', function () {
     return;
   }
 
-  // Now load and display the Pokémon
   pokemonRepository.loadList().then(() => {
     console.log('Pokémon loaded, displaying list...');
     pokemonRepository.displayPokemons();
   });
 
-  // Modal close functionality - SIMPLE AND CLEAN
   function closeModal() {
     $('#pokemonModal').modal('hide');
   }
 
-  // Close button functionality
   $(document).on('click', '#pokemonModal .close', function (event) {
     event.preventDefault();
     closeModal();
   });
 
-  // Close on backdrop click
   $(document).on('click', '#pokemonModal', function (event) {
     if (event.target === this) {
       closeModal();
     }
   });
 
-  // Close on escape key
   $(document).keyup(function (e) {
-    if (e.keyCode === 27) { // Escape key
+    if (e.keyCode === 27) {
       closeModal();
     }
   });
